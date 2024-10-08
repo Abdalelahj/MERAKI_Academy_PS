@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problem Solving</title>
+</head>
+
+<body>
+  <h1 style="text-align: center;">Problem Solving</h1>
+  <h2 id="title" style="text-align: center; margin-top: 50px"></h2>
+  <details  style="border: 1px solid #ccc; border-radius: 5px; margin-bottom: 10px; padding: 10px;">
+    <summary style="cursor: pointer; font-weight: bold; background-color: #f0f0f0; padding: 5px; border-radius: 3px;">Do these steps for once in the repo of problem-solving directory</summary>
+    <ul>
+      <li>Extract folder Project 4 - PS for Problem-solving question</li>
+    <li>Copy folder and paste it inside the repo for problem-solving</li>
+    <li>
+      Initialize a package.json by using <code>npm init -y</code> inside your repo directory
+    </li>
+      <li>Install jest package globally by using the command => <code>npm i jest -g</code></li>
+    </ul>
+  </details>
+  
+  
+<br>
+<details open style="margin-bottom: 10px; border: 1px solid #ddd; padding: 5px;">
+  <summary style="cursor: pointer; font-weight: bold;">For daily solving & test solution</summary>
+  <ul >
+    <li>Run terminal inside <code>Project 4 - PS</code> folder in your repo directory </li>
+    <li>
+      To test the solution,write  =><code> jest ./<span  style="font-weight: bold;"id="folder"></span>/test.js</code>
+    </li>
+    <li>Make sure there is a package.json file in your main directory</li>
+  </ul>
+</details>
+
+  <script>
+    const currentDirectory = window.location.pathname.split("/");
+    const pageTitle =currentDirectory[currentDirectory.length - 2];
+    document.title = pageTitle;
+    const arrowTitle = "===> " + pageTitle + " <===";
+  document.querySelector("#title").innerText = arrowTitle;
+   document.querySelector("#folder").innerText = pageTitle;
+    console.log(arrowTitle);    
+
+
+  </script>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
