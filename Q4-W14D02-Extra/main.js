@@ -7,17 +7,16 @@ write a function to return the largest word in the string
 const longestWord = (str) => {
   // YOUR CODE HERE
   const a = str.split(" ");
-  // console.log(str.split(" "));
+  if (!str.length) {
+    return "it's empty string";
+  }
   const f = a.reduce((acc, item, i) => {
-    if (a[i + 1]) {
-      acc=a[0]
-      
-      if (acc.length < a[i + 1].length) {
-          acc= a[i + 1]
-      }
-    }    
+    if (acc.length < a[i].length) {
+      acc = a[i];
+    }
+
     return acc;
-  }, 0);
+  }, "");
   return f;
 };
 

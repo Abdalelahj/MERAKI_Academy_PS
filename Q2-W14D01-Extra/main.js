@@ -6,6 +6,12 @@ Write a function that returns the sum of odd numbers in an array.
 
 const sumOddNumber = (arr) => {
   // YOUR CODE HERE
+  return arr.reduce((acc,item,i)=>{
+    if(!(item%2===0)){
+      acc+=item
+    }
+    return acc
+  },0)
 };
 
 /*

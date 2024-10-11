@@ -7,6 +7,15 @@ If the array has an even number of elements, return the average of the two middl
 
 const arrayCenter = (arr) => {
   // YOUR CODE HERE
+  let choose;
+  if (!arr.length) {
+    return "empty array";
+  }
+  if (arr.length % 2 == 0) {
+    return (choose = (arr[arr.length / 2 - 1] + arr[arr.length / 2]) / 2);
+  }
+  choose = arr[arr.length / 2 - 1 + 0.5];
+  return choose;
 };
 
 /*
