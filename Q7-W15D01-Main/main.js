@@ -6,6 +6,18 @@ Write a function that returns the number of unique items in an array.
 
 const uniqueItems = (arr) => {
   // YOUR CODE HERE
+  let count=[]
+  arr.map((elem,i)=>{
+    // console.log(i);
+    
+    if(arr.indexOf(elem)==i){
+      console.log("in");
+      count.push(elem)
+    }
+    return count
+
+  })
+return count.length
 };
 
 /*
