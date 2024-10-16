@@ -8,7 +8,14 @@ Hint: her resource for Regular expressions you can check it and read more (https
 */
 
 const longestWord_2 = (str) => {
-  // YOUR CODE HERE
+  // YOUR CODE HERE'
+  const reqgx= /\W+/g
+  const newString= str.replace(reqgx," ").split(" ")
+  
+  const check =newString.reduce((acc,item)=>{
+      return acc.length<item.length?acc=item:acc
+  },"")
+  return check
 };
 
 /* 
