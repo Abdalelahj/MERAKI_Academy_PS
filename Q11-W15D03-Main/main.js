@@ -6,6 +6,10 @@ Write a function returns true if a number is a power of 2, and false if not.
 
 const isPowerOfTwo = (num) => {
   // YOUR CODE HERE
+ if(Math.log2(num)%2==0){
+  return true
+ }
+ return false
 };
 /*
 Examples:
