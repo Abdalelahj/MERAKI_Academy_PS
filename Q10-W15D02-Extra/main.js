@@ -8,6 +8,25 @@ Hint : her resource for Prototype you can check it and read more (https://www.w3
 
 Array.prototype.isPartOf = function (array) {
   // YOUR CODE HERE
+  //  const truthy = array.reduce((acc,elem)=>{
+  //   if(this.length){
+  //     acc = this.includes(elem)
+  //   }else{
+  //     acc=true
+  //   }
+  //   return acc
+  //  })  
+
+  // return truthy
+
+
+  // testing another solution
+
+ const test= this.every((elem)=>{
+  return  array.includes(elem)
+  })
+return test  
+
 };
 
 /*

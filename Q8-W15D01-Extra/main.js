@@ -5,6 +5,9 @@
 
 const isPrime = (num) => {
   // YOUR CODE HERE
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+  if (num % 2 == 0) return false;
 };
 
 module.exports = { isPrime };
