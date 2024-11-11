@@ -11,9 +11,15 @@ const array_Copy = (arr) => {
   // const copiedArray=[...arr]
   // return copiedArray
 
-  return arr.map(elem=>{
-    return elem
-  })
+  // return arr.map(elem=>{
+  //   return elem
+  // })
+  const copiedArray=[]
+  for (let index = 0; index < arr.length; index++) {
+    copiedArray.push(arr[index]);
+    
+  }
+  return copiedArray
 };
 
 /*
