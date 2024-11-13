@@ -6,6 +6,24 @@ Write a function calculates the Highest possible sum of any n consecutive number
 
 const findHighestPossibleSum = (arr, num) => {
   // YOUR CODE HERE
+  let current = 0;
+  let maxSum = 0;
+  for(let i=0;i<num;i++){
+    current += arr[i]
+  }
+  maxSum=current
+  for(let y=num;y<arr.length;y++){
+    current=current+arr[y]-arr[y-num]
+    //12+3-10=5
+    //5+4-2=7
+    //7+2-3=6
+    //6+6-4=8
+    //8+8-2=14
+    maxSum=Math.max(current,maxSum)
+    //12
+    //14
+  }
+  return maxSum
 };
 
 /*
