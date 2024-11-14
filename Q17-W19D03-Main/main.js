@@ -16,6 +16,18 @@ Output:
 */
 const floydTriangle = (rows) => {
   // YOUR CODE HERE
+//in each row number of spaces equal rows-i
+//rows-3 => spaces in first row 3-1=2
+let eachRow=""
+let counter=1
+for(let i=1; i<=rows ;i++){   
+  for(let y=1 ; y<=i ;y++){
+    eachRow +=counter+" "
+    counter++
+  }
+  console.log(eachRow);
+  eachRow=""
+  }     
 };
 
 /*
