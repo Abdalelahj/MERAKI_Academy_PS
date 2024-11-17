@@ -7,6 +7,29 @@ Ignore any space character
 
 const removeNotUnique = (str) => {
   // YOUR CODE HERE
+
+  let newStr = str.replaceAll(" ", "").split("");
+
+  if (newStr.length) {
+    let select = [];
+    const check = newStr.filter((elem, i) => {
+      if (newStr.indexOf(elem) === i) {
+        return elem;
+      } else {
+        select.push(elem);
+      }
+    });
+    select.forEach((element) => {
+      check.forEach((el, i) => {
+        if (el === element) {
+          check.splice(i, 1);
+        }
+      });
+    });
+    return check.join("");
+  } else {
+    return "it's empty";
+  }
 };
 
 /* 
