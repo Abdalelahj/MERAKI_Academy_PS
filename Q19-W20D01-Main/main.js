@@ -8,6 +8,27 @@
 
 const characterRecurrence = (str) => {
   // YOUR CODE HERE
+  let repeated=[]
+  let count={}
+  const newStr= str.split("")
+ 
+  newStr.forEach(element => {
+    count[element]=(count[element] || 0) + 1
+  });
+  
+  for (const key in count) {
+    repeated.push([key,count[key]])
+  }
+  repeated.sort((a,b)=>{
+    let first =a[0].toLowerCase()
+    let sec =b[0].toLowerCase()
+    if(a[1] !== b[1]){
+      return b[1]-a[1]
+    }
+    return first<sec?-1:(first>sec)?1:0
+  })
+  return repeated;
+  
 };
 
 /* 
