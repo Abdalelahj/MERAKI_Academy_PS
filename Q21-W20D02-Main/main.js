@@ -6,6 +6,25 @@ Note: you will always receive a valid array containing a random assortment of di
 
 const isValidWalk = (walks) => {
   // YOUR CODE HERE
+  let count = {};
+  let NS = [];
+  let EW = [];
+  walks.map((elem) => (count[elem] = (count[elem] || 0) + 1));
+  if(walks.length===10){
+
+    for (const key in count) {
+      if (key == "N") {
+        NS.push(count[key]);
+      } else if (key == "S") {
+        NS.push(count[key]);
+      } else if (key == "W") {
+        EW.push(count[key]);
+      } else {
+        EW.push(count[key]);
+      }
+    }
+    return NS[0] === NS[1] && EW[0] === EW[1];
+  }else return false
 };
 
 /*
