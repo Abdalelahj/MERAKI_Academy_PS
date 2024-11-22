@@ -13,16 +13,27 @@ If the username is valid then your program should return the string true, otherw
 
 const usernameValidation = (str) => {
   // YOUR CODE HERE
+  let re = /^[A-Za-z]\w+[^_]$/g;
+
+  if (str.length >= 4 && str.length <= 25) {
+    if (str.match(re)) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    return false;
+  }
 };
 
 /* 
 Examples:
-usernameValidation("aa_"); // => false
-usernameValidation("u__hello_world123"); // => true
-usernameValidation("3MaiYousef"); // => false
-usernameValidation("#MaiYousef"); // => false
-usernameValidation("John_123_H"); // => true
-usernameValidation("3  MaiYousef"); // => false
 usernameValidation("Mai4Yousef!_"); // => false
+usernameValidation("u__hello_world123"); // => true
+usernameValidation("John_123_H"); // => true
+usernameValidation("#MaiYousef"); // => false
+usernameValidation("aa_"); // => false
+usernameValidation("3  MaiYousef"); // => false
+usernameValidation("3MaiYousef"); // => false
 */
 module.exports = { usernameValidation };
