@@ -7,11 +7,15 @@ Given an integer n, return n! (n factorial)
 
 const findFactorial = (num) => {
   // YOUR CODE HERE
+  if(num==1){
+    return 1
+  }
+  return num *findFactorial(num-1)
 };
 
+findFactorial(1); // => 1
 /*
 Examples:
-findFactorial(1); // => 1
 findFactorial(3); // => 6
 findFactorial(4); // => 24
 findFactorial(6); // => 720
