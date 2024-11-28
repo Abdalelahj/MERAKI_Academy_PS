@@ -13,16 +13,26 @@ true
 
 const isArmstrong = (num) => {
   // YOUR CODE HERE
+  const copyForTest = num.toString().split("");
+  if (num.toString().length == 3) {
+    const letSee = copyForTest.reduce((acc, elem) => {
+      return (acc += elem * elem * elem);
+    }, 0);
+
+    return letSee == num ? true : false;
+  } else {
+    return false;
+  }
 };
 
 /*
 Examples:
-console.log(isArmstrong(407));//true
+console.log(isArmstrong(152514214));// false
+console.log(isArmstrong(154));// false
 console.log(isArmstrong(370));// true
+console.log(isArmstrong(407));//true
 console.log(isArmstrong(371));// true
 console.log(isArmstrong(153));// true
-console.log(isArmstrong(154));// false
-console.log(isArmstrong(152514214));// false
 
 */
 
