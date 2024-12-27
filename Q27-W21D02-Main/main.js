@@ -10,9 +10,10 @@ const getQueryString = (url) => {
   let selected = [];
 
   if (url.includes("?")) {
-    const reg = /\b%\d+/g;
-    url = url.replace(reg, " ");
-    const newArr = url.split("?")[1]?.split("&");
+    const reg = /%\d+/g;
+    
+    url = url.replace(reg, " ");    
+    const newArr = url.split("?")[1]?.split("&");    
     for (let index = 0; index < newArr.length; index++) {
       let dest = newArr[index].split("=");
       selected.push(dest);
@@ -22,9 +23,9 @@ const getQueryString = (url) => {
     return undefined;
   }
 };
+// console.log(getQueryString("http://example.com?a=lol&b=88"));
 
 // console.log(getQueryString("http://example.com?a=lol")); //=> [ [ "a", "lol" ] ]
-// console.log(getQueryString("http://example.com?a=lol&b=88"));
 // console.log(getQueryString("http://example.com?msg=lol%20world"));
 // console.log(getQueryString("http://example.com"));
 

@@ -5,9 +5,20 @@
 
 const isPrime = (num) => {
   // YOUR CODE HERE
+  if(num<0) return "The number is negative."
   if (num <= 1) return false;
   if (num <= 3) return true;
   if (num % 2 == 0) return false;
+
+  for (let i = 3; i < num; i++) {
+    if (num % i == 0) {
+        return false
+    }else{
+      return true
+    }
+  }
 };
 
 module.exports = { isPrime };
+
+console.log(isPrime(-23));
